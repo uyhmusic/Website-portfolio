@@ -3,167 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenangan OSIS SPENLIBELS</title>
+     <!--  Title yang muncul di tab browser & hasil Google -->
+    <title>Pendidikan Febri Nurdiansyah</title>
+
+    <!--  Meta SEO -->
+    <meta name="description" content=" Moh Febri Nurdiansyah, pelajar & content creator digital, dropshipping handphone dari Gresik yang aktif dalam teknologi dan wirausaha.">
+    <meta name="keywords" content="Tentang Febri Ns,Tentang Moh Febri Nurdiansyah, Tentang Febri Nurdiansyah, Moh Febri, Febri Gresik, Febri Smkn 1 Cerme, Febri, web developer, digital freelancer, pelajar kreatif, Gresik">
+    <meta name="author" content="Febri Ns">
+
+     <link rel="icon" type="jpg" href="favicon.jpg">
     <style>
         :root {
-            --primary: #3498db;  /* Biru lebih segar */
-            --primary-dark: #2980b9;
-            --secondary: #7f8c8d;
-            --light: #f0f7fc;    /* Biru sangat muda untuk background */
-            --white: #ffffff;
-            --dark: #2c3e50;     /* Biru tua untuk teks */
+            --primary: #fc6335;
+            --secondary: #ffe600;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --accent: #F59E0B;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--light);
+            background-color: var(--light);
             color: var(--dark);
-            line-height: 1.6;
-            padding: 0;
+            line-height: 1.7;
         }
         
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
+        .education-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6rem 2rem 4rem;
             text-align: center;
-            margin-bottom: 25px;
-            padding: 15px 0;
-            background: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 3rem;
         }
         
-        h1 {
-            color: var(--primary);
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            margin-bottom: 5px;
+        .education-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
         }
         
-        .subtitle {
-            color: var(--secondary);
-            font-style: italic;
-            font-size: clamp(0.9rem, 3vw, 1rem);
+        .education-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
         }
         
-        .memory-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            margin-bottom: 25px;
-            border: 1px solid rgba(52, 152, 219, 0.2);
-        }
-        
-        .photo-container {
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
             position: relative;
         }
         
-        .photo {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-bottom: 3px solid var(--primary);
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateX(-50%);
+            z-index: 1;
         }
         
-        .photo-caption {
-            padding: 10px 15px;
-            text-align: center;
-            font-size: 0.85rem;
+        .education-item {
+            display: flex;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .education-item:nth-child(odd) {
+            justify-content: flex-start;
+            padding-right: calc(50% + 2rem);
+            text-align: right;
+        }
+        
+        .education-item:nth-child(even) {
+            justify-content: flex-end;
+            padding-left: calc(50% + 2rem);
+            text-align: left;
+        }
+        
+        .education-content {
+            max-width: 450px;
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .education-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .school-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 4px solid var(--light);
+            overflow: hidden;
+        }
+        
+        .education-item:nth-child(odd) .school-logo {
+            right: -40px;
+        }
+        
+        .education-item:nth-child(even) .school-logo {
+            left: -40px;
+        }
+        
+        .school-logo img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+        
+        .education-period {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .school-name {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--dark);
-            background: rgba(240, 247, 252, 0.9);
-            font-weight: 500;
         }
         
-        .story {
-            padding: 15px;
-            font-size: clamp(0.95rem, 3vw, 1rem);
+        .education-story {
+            margin-bottom: 1.5rem;
+            color: #555;
         }
         
-        .highlight {
-            color: var(--primary-dark);
-            font-weight: 600;
+        .highlight-memory {
+            background: linear-gradient(90deg, rgba(79, 70, 229, 0.1), rgba(16, 185, 129, 0.1));
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin: 1.2rem 0;
+            border-left: 3px solid var(--accent);
         }
         
-        .btn-container {
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
             text-align: center;
-            margin: 30px 0 15px;
+            margin-top: 5rem;
         }
         
-        .back-btn {
-            display: inline-block;
-            padding: 10px 25px;
-            background: var(--primary);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
-        }
-        
-        .back-btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.4);
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 40px;
+            }
+            
+            .education-item {
+                flex-direction: column;
+                padding-left: 80px !important;
+                padding-right: 20px !important;
+                text-align: left !important;
+            }
+            
+            .education-item:nth-child(odd) .school-logo,
+            .education-item:nth-child(even) .school-logo {
+                left: 0;
+                right: auto;
+                top: 30px;
+                transform: none;
+            }
+            
+            .education-header {
+                padding: 4rem 1.5rem 3rem;
+            }
+            
+            .education-header h1 {
+                font-size: 2rem;
+            }
         }
         
         @media (max-width: 480px) {
-            .container {
-                padding: 15px;
+            .education-content {
+                padding: 1.8rem;
             }
             
-            .memory-card {
-                margin-bottom: 20px;
-            }
-            
-            .photo-caption {
-                font-size: 0.8rem;
-                padding: 8px 10px;
-            }
-            
-            .story {
-                padding: 12px;
+            .school-name {
+                font-size: 1.3rem;
             }
         }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .education-item {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .education-item:nth-child(1) { animation-delay: 0.1s; }
+        .education-item:nth-child(2) { animation-delay: 0.2s; }
+        .education-item:nth-child(3) { animation-delay: 0.3s; }
+        .education-item:nth-child(4) { animation-delay: 0.4s; }
+
+        .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background-color: #e7af5c;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        border: none;
+        cursor: pointer;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    .back-button:hover {
+        background-color: #fbff00;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(108, 92, 231, 0.4);
+    }
+    
+    .back-button:active {
+        transform: translateY(0);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .back-button {
+            top: 10px;
+            left: 10px;
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+    }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Haul Mbah Buyut Dsn. Petis</h1>
-            <p class="subtitle">Tahun 2024 </p>
-        </header>
-        
-        <div class="memory-card">
-            <div class="photo-container">
-                <img src="IMG-20240518-WA0079.jpg" alt="uccpetis" class="photo">
-                <div class="photo-caption">Haul Petis</div>
+    <header class="education-header">
+        <h1>Perjalanan Pendidikan Saya</h1>
+        <p>Dari bangku sekolah hingga perguruan tinggi, setiap tahap membentuk diri saya yang sekarang</p>
+    </header>
+    
+    <div class="timeline">
+        <!-- SD -->
+        <div class="education-item">
+            <div class="education-content">
+                <span class="education-period">2005 - 2011</span>
+                <h3 class="school-name">SD Negeri 01 Contoh</h3>
+                <p class="education-story">
+                    Awal perjalanan pendidikan saya dimulai di sekolah dasar ini. Saya masih ingat betapa senangnya saya saat pertama kali memakai seragam merah putih. Guru kelas 1 saya, Ibu Ani, adalah sosok yang sangat sabar mengajari kami membaca dan menulis.
+                </p>
+                
+                <div class="highlight-memory">
+                    "Peringatan Hari Kemerdekaan tahun 2008 adalah kenangan terindah, ketika saya terpilih sebagai pembaca puisi di depan seluruh sekolah."
+                </div>
+                
+                <p class="education-story">
+                    Di sini saya belajar dasar-dasar disiplin dan tanggung jawab. Nilai matematika saya selalu buruk, tapi Ibu Ani tidak pernah menyerah mendorong saya untuk terus berusaha.
+                </p>
             </div>
-            <div class="story">
-                <p>"Haul Dusun Petis acara tahun 2024 ini buat kirim doa bareng-bareng ke para sesepuh desa petis. Acara Di isi dengan Acara pembacaan Maulidul Rasul <b> Al-Khidmah</b> ada dzikiran, maulidan, terus doa bersama. Selain doa doa, ini juga jadi ajang kumpul warga, guyub, dan mendapatkan barokah bersama."</p>
+            <div class="school-logo">
+                <img src="logo-sd.png" alt="Logo SD">
             </div>
         </div>
         
+        <!-- SMP -->
+        <div class="education-item">
+            <div class="education-content">
+                <span class="education-period">2011 - 2014</span>
+                <h3 class="school-name">SMP Negeri 02 Contoh</h3>
+                <p class="education-story">
+                    Masa pubertas yang penuh gejolak saya lewati di sekolah ini. Seragam biru putih membuat saya merasa lebih dewasa. Di sini saya mulai tertarik dengan komputer dan bergabung dengan ekstrakurikuler teknologi informasi.
+                </p>
+                
+                <div class="highlight-memory">
+                    "Tahun 2013, tim IT kami memenangkan lomba membuat blog se-kabupaten. Ini adalah prestasi pertama yang membuat orang tua saya bangga."
+                </div>
+                
+                <p class="education-story">
+                    Saya juga belajar tentang persahabatan sejati dan menghadapi konflik pertama dengan teman sekelas. Pak Budi, guru matematika, adalah sosok yang mengubah pandangan saya bahwa matematika bisa menyenangkan.
+                </p>
+            </div>
+            <div class="school-logo">
+                <img src="logo-smp.png" alt="Logo SMP">
+            </div>
+        </div>
         
-     <div class="btn-container">
-    <button class="back-btn" onclick="window.location.href='index.html#portfolio'">Kembali</button>
-</div> 
+        <!-- SMA -->
+        <div class="education-item">
+            <div class="education-content">
+                <span class="education-period">2014 - 2017</span>
+                <h3 class="school-name">SMA Negeri 03 Contoh</h3>
+                <p class="education-story">
+                    Saya masuk jurusan IPA karena dorongan orang tua, meskipun sebenarnya lebih menyukai pelajaran sosial. Masa-masa ini penuh dengan drama percintaan remaja dan tekanan ujian nasional.
+                </p>
+                
+                <div class="highlight-memory">
+                    "Kegagalan saya di OSN Fisika tingkat provinsi mengajarkan bahwa kegagalan bukan akhir, tapi awal untuk mencoba cara yang berbeda."
+                </div>
+                
+                <p class="education-story">
+                    Di kelas 12, saya akhirnya berani mengakui bahwa saya ingin melanjutkan ke jurusan humaniora. Bimbingan konseling di sekolah membantu saya meyakinkan orang tua tentang pilihan ini.
+                </p>
+            </div>
+            <div class="school-logo">
+                <img src="logo-sma.png" alt="Logo SMA">
+            </div>
+        </div>
         
-     
+        <!-- Universitas -->
+        <div class="education-item">
+            <div class="education-content">
+                <span class="education-period">2017 - 2021</span>
+                <h3 class="school-name">Universitas Contoh</h3>
+                <p class="education-story">
+                    Jurusan Ilmu Komunikasi akhirnya menjadi pilihan saya. Tahun pertama sangat menantang karena harus beradaptasi dengan sistem perkuliahan dan kehidupan kos yang mandiri.
+                </p>
+                
+                <div class="highlight-memory">
+                    "Menjadi ketua acara tahunan fakultas di tahun kedua adalah pencapaian terbesar saya. Dari sini saya belajar manajemen tim dan event yang sebenarnya."
+                </div>
+                
+                <p class="education-story">
+                    Skripsi saya tentang media digital mendapat penghargaan dari dekan. Proses menyusunnya penuh air mata dan perjuangan, tapi hasilnya sangat memuaskan.
+                </p>
+            </div>
+            <div class="school-logo">
+                <img src="logo-univ.png" alt="Logo Universitas">
+            </div>
+        </div>
     </div>
+    
+    <button class="back-button" onclick="window.location.href='index.html'">⬅ Kembali</button>
+
+    <footer>
+        <p>© 2023 Perjalanan Pendidikan. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // Animasi saat scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const educationItems = document.querySelectorAll('.education-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            educationItems.forEach(item => {
+                item.style.animationPlayState = 'paused';
+                observer.observe(item);
+            });
+        });
+    </script>
 </body>
 </html>
-
