@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usaha Febri Nurdiansyah</title>
+    <meta name="description" content="Moh Febri Nurdiansyah, Sebagai pelajar & content creator digital, dropshipping handphone dari Gresik yang aktif dalam teknologi dan wirausaha.">
+    <meta name="keywords" content="Usaha Febri Ns, Usaha Moh Febri Nurdiansyah, Bisnis Febri Nurdiansyah, Moh Febri, Febri Gresik, Febri Smkn 1 Cerme,Bos Febri, web developer, digital freelancer, pelajar kreatif, Gresik">
+    <meta name="author" content="Febri Ns">
+    <link rel="icon" type="jpg" href="favicon.jpg">
+    <style>
+        :root {
+            --primary: #fc6335;
+            --secondary: #ffe600;
+            --dark: #2D3436;
+            --light: #F5F6FA;
+            --accent: #FD79A8;
+            --konter: #e30909;
+            --dropship: #fc6335;
+            --instagram: #E1306C;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        .business-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6rem 2rem 8rem;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            margin-bottom: -4rem;
+        }
+        
+        .business-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .business-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .business-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+        
+        .business-card {
+            display: flex;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            min-height: 400px;
+        }
+        
+        .business-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .business-image {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .business-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        .business-card:hover .business-image img {
+            transform: scale(1.05);
+        }
+        
+        .business-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .business-content {
+            flex: 1;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .business-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .konter-tag {
+            background: rgba(9, 132, 227, 0.1);
+            color: var(--konter);
+        }
+        
+        .dropship-tag {
+            background: rgba(0, 206, 255, 0.1);
+            color: var(--dropship);
+        }
+        
+        .business-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .konter-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--konter);
+            border-radius: 2px;
+        }
+        
+        .dropship-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--dropship);
+            border-radius: 2px;
+        }
+        
+        .business-description {
+            margin-bottom: 1.8rem;
+            color: #555;
+        }
+        
+        .business-highlight {
+            background: linear-gradient(90deg, rgba(108, 92, 231, 0.1), rgba(0, 184, 148, 0.1));
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .business-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            background: rgba(245, 246, 250, 0.8);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .business-footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 6rem;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        /* Instagram Button Styles */
+        .instagram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, var(--instagram), #ff8f0f);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(252, 93, 30, 0.3);
+        }
+        
+        .instagram-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 219, 15, 0.4);
+            background: linear-gradient(45deg, #ff7c02, var(--instagram));
+        }
+        
+        .instagram-btn:active {
+            transform: translateY(0);
+        }
+        
+        .instagram-icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .business-card {
+                flex-direction: column;
+                min-height: auto;
+            }
+            
+            .business-image {
+                height: 300px;
+            }
+            
+            .business-content {
+                padding: 2rem;
+            }
+            
+            .business-header {
+                padding: 4rem 1.5rem 6rem;
+            }
+            
+            .business-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .business-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .business-title {
+                font-size: 1.8rem;
+            }
+            
+            .business-header {
+                padding: 3rem 1rem 5rem;
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .business-card {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+        
+        .business-card:nth-child(1) { animation-delay: 0.2s; }
+        .business-card:nth-child(2) { animation-delay: 0.4s; }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: #e7af5c;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+            cursor: pointer;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        .back-button:hover {
+            background-color: #ffd61d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(108, 92, 231, 0.4);
+        }
+        
+        .back-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .back-button {
+                top: 10px;
+                left: 10px;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+        </svg>
+        Kembali
+    </button>
+
+    <header class="business-header">
+        <h1>Usaha Febri</h1>
+        <p>Dua Bisnis Yang sedang Beroperasi dengan semangat dan konsisten</p>
+    </header>
+    
+    <div class="business-container">
+        <!-- Usaha 1: Umiana Celluler -->
+        <article class="business-card">
+            <div class="business-image">
+                <img src="ucell.jpg" alt="Umiana Celluler - Konter Pulsa">
+            </div>
+            <div class="business-content">
+                <span class="business-tag konter-tag">Agen Pulsa</span>
+                <h2 class="business-title konter-title">Umiana Celluler</h2>
+               
+                <div class="business-highlight">
+                    <p>"Melayani dengan ramah, menjadi solusi bagi pelanggan yang membutuhkan pulsa dan kebutuhna elektrik lainnya."</p>
+                </div>
+                
+                <div class="business-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Jam Buka</div>
+                        <div class="stat-number">08.00 - 20.00</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Pelanggan Harian</div>
+                        <div class="stat-number">50+</div>
+                    </div>
+                </div>
+
+                <!-- Tombol Instagram untuk Umiana Celluler -->
+                <a href="https://instagram.com/umianacelluler" target="_blank" class="instagram-btn">
+                    <svg class="instagram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    Kunjungi Instagram
+                </a>
+            </div>
+        </article>
+        
+        <!-- Usaha 2: Briist0re -->
+        <article class="business-card">
+            <div class="business-image">
+                <img src="bristore1.jpg" alt="Briist0re - Dropship Handphone">
+            </div>
+            <div class="business-content">
+                <span class="business-tag dropship-tag">Dropshiping</span>
+                <h2 class="business-title dropship-title">Briist0re</h2>
+                <div class="business-highlight">
+                    <p>"Strategi unik dari konten di Instagram, meningkatkan kepercayaan calon pembeli."</p>
+                </div>
+                
+                <!-- Tombol Instagram untuk Briist0re -->
+                <a href="https://instagram.com/briist0re" target="_blank" class="instagram-btn">
+                    <svg class="instagram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    Kunjungi Instagram
+                </a>
+            </div>
+        </article>
+    </div>
+    
+    <footer class="business-footer">
+        <p>© 2025 Febri Ns. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Animasi saat scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const businessCards = document.querySelectorAll('.business-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            businessCards.forEach(card => {
+                card.style.animationPlayState = 'paused';
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Usaha Moh Febri Nurdiansyah",
+      "alternateName": "Febri NS",
+      "url": "https://nurdiansyahnice.my.id",
+      "sameAs": [
+        "https://instagram.com/febri.ns_",
+        "https://youtube.com/@febrinstech",
+        "https://t.me/Brobri"
+      ],
+      "jobTitle": "Digital Creator, umianacelluler, Briist0re",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Usaha UmiAna Celluler dan briist0re"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gresik",
+        "addressRegion": "Jawa Timur",
+        "addressCountry": "Indonesia"
+      }
+    }
+    </script>
+
+
+</body>
+</html>

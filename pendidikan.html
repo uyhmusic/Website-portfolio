@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--  Title yang muncul di tab browser & hasil Google -->
+    <title>Pendidikan Febri Nurdiansyah</title>
+
+    <!--  Meta SEO -->
+    <meta name="description" content=" Moh Febri Nurdiansyah, Sebagai pelajar & content creator digital, dropshipping handphone dari Gresik yang aktif dalam teknologi dan wirausaha.">
+    <meta name="keywords" content="Pendidikan Febri Ns,Pendidikan Moh Febri Nurdiansyah, Pendidikan Febri Nurdiansyah, Pendidikan Moh Febri, Febri Gresik, Febri Smkn 1 Cerme, Febri, web developer, digital freelancer, pelajar kreatif, Gresik">
+    <meta name="author" content="Febri Ns">
+
+     <link rel="icon" type="jpg" href="favicon.jpg">
+    <style>
+        :root {
+            --primary: #fc6335;
+            --secondary: #ffe600;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --accent: #F59E0B;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        .education-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 3rem;
+        }
+        
+        .education-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .education-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .education-item {
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .school-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .school-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        .education-item:hover .school-image img {
+            transform: scale(1.05);
+        }
+        
+        .education-content {
+            padding: 2rem;
+        }
+        
+        .education-period {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .school-name {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .school-name::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .education-story {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .highlight-memory {
+            background: linear-gradient(90deg, rgba(252, 99, 53, 0.1), rgba(255, 230, 0, 0.1));
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 3px solid var(--accent);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .back-button:hover {
+            background-color: #e0552a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+        
+        .back-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .education-header {
+                padding: 4rem 1.5rem 3rem;
+            }
+            
+            .education-header h1 {
+                font-size: 2rem;
+            }
+            
+            .school-image {
+                height: 200px;
+            }
+            
+            .back-button {
+                top: 10px;
+                left: 10px;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .education-content {
+                padding: 1.5rem;
+            }
+            
+            .school-name {
+                font-size: 1.3rem;
+            }
+            
+            .school-image {
+                height: 180px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .education-item {
+            animation: fadeIn 0.8s ease forwards;
+            opacity: 0;
+        }
+        
+        .education-item:nth-child(1) { animation-delay: 0.1s; }
+        .education-item:nth-child(2) { animation-delay: 0.3s; }
+        .education-item:nth-child(3) { animation-delay: 0.5s; }
+        .education-item:nth-child(4) { animation-delay: 0.7s; }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+        </svg>
+        Kembali
+    </button>
+
+    <header class="education-header">
+        <h1>Perjalanan Pendidikan Saya</h1>
+        <p>Dari bangku sekolah sampai sekarang, setiap tahap membentuk diri saya yang sekarang</p>
+    </header>
+    
+    <div class="timeline">
+        <!-- SD -->
+        <div class="education-item">
+            <div class="school-image">
+                <img src="sd.jpg" alt="foto SD">
+            </div>
+            <div class="education-content">
+                <span class="education-period">2015 - 2020</span>
+                <h2 class="school-name">UPT SDN 83 GRESIK</h2>
+                <div class="highlight-memory">
+                    Awal perjalanan pendidikan saya dimulai di sekolah dasar ini. Saya masih ingat betapa senangnya saya saat pertama kali memakai seragam merah putih.
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- SMP -->
+        <div class="education-item">
+            <div class="school-image">
+                <img src="smp.png" alt="foto SMP">
+            </div>
+            <div class="education-content">
+                <span class="education-period">2020 - 2023</span>
+                <h2 class="school-name">UPT SMPN 15 GRESIK</h2>
+                <div class="highlight-memory">
+                    Ngajarin banyak hal, bukan cuma pelajaran, tapi juga solidaritas dan tanggung jawab.
+                </div>
+            </div>
+        </div>
+        
+        <!-- SMA -->
+        <div class="education-item">
+            <div class="school-image">
+                <img src="smk.png" alt="foto smk">
+            </div>
+            <div class="education-content">
+                <span class="education-period">2023 - Sekarang</span>
+                <h2 class="school-name">SMKN 1 CERME GRESIK</h2>
+                <div class="highlight-memory">
+                    Ngajarin banyak hal, bukan cuma teori tapi juga skill yang relevan sama dunia kerja. Kita diajarin mandiri, tanggung jawab, dan bagaimana menghadapi tantangan di dunia nyata. Semua itu jadi bekal berharga buat masa depan.
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    <footer>
+        <p>© 2025 Febri Ns. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Animasi saat scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const educationItems = document.querySelectorAll('.education-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            educationItems.forEach(item => {
+                item.style.animationPlayState = 'paused';
+                observer.observe(item);
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pendidikan Moh Febri Nurdiansyah",
+      "alternateName": "Febri NS",
+      "url": "https://nurdiansyahnice.my.id",
+      "sameAs": [
+        "https://instagram.com/febri.ns_",
+        "https://youtube.com/@febrinstech",
+        "https://t.me/Brobri"
+      ],
+      "jobTitle": "Digital Creator, umianacelluler, Briist0re",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "pengelola UmiAna Celluler dan briist0re"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gresik",
+        "addressRegion": "Jawa Timur",
+        "addressCountry": "Indonesia"
+      }
+    }
+    </script>
+
+</body>
+</html>
